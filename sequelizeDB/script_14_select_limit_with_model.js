@@ -89,7 +89,7 @@ const User = sequelize.define('user', {
 });
 User.sync({alter:true}).then(()=>{
         
-    return sequelize.query(`SELECT * FROM user LIMIT 1`,{model:User});
+    return sequelize.query(`SELECT * FROM user LIMIT 1`,{model:User,plain:true});
 
     }).then((data)=>{ 
     console.log(data);     
