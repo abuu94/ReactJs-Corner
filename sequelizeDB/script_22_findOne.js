@@ -101,7 +101,7 @@ function myInfo(){
     console.log("RUNNING SQL STATEMENT")
 }
 User.sync({alter:true}).then(()=>{
-    return User.findOne();
+    return User.findOne({paranoid:false}); // true consider paranoid but false ignore paranoid
         
    
 }).then((data)=>{
