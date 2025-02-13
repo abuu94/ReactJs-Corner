@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const zlib = require('zlib');
 const { type } = require('os');
 const { timeStamp, error } = require('console');
-const sequelize = new Sequelize('sequelizedb', 'root', 'Mkubwa*94',{
+const sequelize = new Sequelize('sequelizedb', 'root', 'toor',{
     host: 'localhost',
     port: 3306,
     dialect: 'mysql', 
@@ -39,16 +39,24 @@ const Capital=sequelize.define('capital',{
     timestamps:false
 });
 
-// Extra object arguments
+// Extra object arguments: RESTRICT, CASCADE, NO ACTION, SET DEFAULT, SET NULL
 Country.hasOne(Capital,{onUpdate:'CASCADE'}); 
-Capital.belongsTo(Country,{onUpdate:'CASCADE'});   
+Capital.belongsTo(Country,{onDelete:'CASCADE'});   
 
 
 let country,capital; 
 sequelize.sync({alter:true}).then(()=>{
     console.log('Database synchronized');
-    return Country.destroy({ where:{ countryName:'Kenya'}});
+    return Country.findOne({ where:{ countryName:'Uganda'}});
 }).then((data)=>{
+    country=data;
+    return Capital.findOne({where:{ capitalName:'Nairobi'}});
+}).then((data)=>{
+    capital=data;
+    return country.setCapital(capital);
+})
+
+.then((data)=>{
     console.log(data.toJSON())
 })
 .catch((error)=>{
