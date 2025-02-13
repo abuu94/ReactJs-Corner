@@ -25,7 +25,7 @@ const Country = sequelize.define('country',{
     }  
   },{
     // freezeTableName:true,
-    timestamp:false
+    timestamps:false
   });
 
 const Capital=sequelize.define('capital',{
@@ -36,10 +36,10 @@ const Capital=sequelize.define('capital',{
 
     },{
     // freezeTableName:true,
-    timestamp:false
+    timestamps:false
 });
 
-Country.HasOne(Capital);  
+Country.hasOne(Capital);  
 //Relationship : (Capital,{foreignKey:'countryID'})
 // You can provide custome FK name
 sequelize.sync({alter:true}).then(()=>{
@@ -47,4 +47,3 @@ sequelize.sync({alter:true}).then(()=>{
 }).catch((error)=>{
     console.log(error);
 });
-
