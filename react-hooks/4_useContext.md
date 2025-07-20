@@ -1,0 +1,2 @@
+- It manage state globally, any where in the project. Together with useState hook it can share state between nested components more easily by doing "pop drilling".
+- 
