@@ -6,31 +6,18 @@ ECMAScript was created to standardize JavaScript, and ES6 is the 6th version of 
 
 - Classes
 ```
-class Car {
-  constructor(name) {
-    this.brand = name;
-  }
-
-  present() {
-    return 'I have a ' + this.brand;
-  }
-}
-
-class Model extends Car {
-  constructor(name, mod) {
-    super(name);
-    this.model = mod;
-  }  
-  show() {
-      return this.present() + ', it is a ' + this.model
-  }
-}
-const mycar = new Model("Ford", "Mustang");
-mycar.show();
+https://www.w3schools.com/react/react_es6_classes.asp
 ```
 - Arrow Functions
-- Variables (let, const, var)
-- Array Methods like .map()
+```
+https://www.w3schools.com/react/react_es6_arrow.asp
+```
+- Variables (let, const, var): Now, with ES6, there are three ways of defining your variables: var, let, and const.
+- Array Methods like .map():
+The .map() method allows you to run a function on each item in the array, returning a new array as the result.
+```
+https://www.w3schools.com/react/react_es6_array_methods.asp
+```
 - Destructuring
 - Modules
 - Ternary Operator
