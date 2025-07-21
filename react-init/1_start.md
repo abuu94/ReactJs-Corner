@@ -24,10 +24,13 @@ https://www.w3schools.com/react/react_es6_destructuring.asp
 ```
 - Modules
 ```
+https://www.w3schools.com/react/react_es6_modules.asp
 ```
 - Ternary Operator
 ```
+https://www.w3schools.com/react/react_es6_ternary.asp
 ```
 - Spread Operator
 ```
+https://www.w3schools.com/react/react_es6_spread.asp
 ```
