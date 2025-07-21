@@ -1,4 +1,4 @@
-Script 1 : 
+Script 1 :  useCallback
 ```
 import { useState, useEffect, createContext,useContext, useRef, useReducer, useCallback } from "react";
 import reactLogo from "./assets/react.svg";
