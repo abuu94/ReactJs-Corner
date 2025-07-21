@@ -19,6 +19,15 @@ The .map() method allows you to run a function on each item in the array, return
 https://www.w3schools.com/react/react_es6_array_methods.asp
 ```
 - Destructuring
+```
+https://www.w3schools.com/react/react_es6_destructuring.asp
+```
 - Modules
+```
+```
 - Ternary Operator
+```
+```
 - Spread Operator
+```
+```
