@@ -69,3 +69,36 @@ function App() {
 }
 export default App;
 ```
+
+- TextArea
+```
+import { useState, useEffect, createContext,useContext, useRef, useReducer, useCallback,useMemo } from "react";
+import ReactDOM from 'react-dom/client';
+import "./App.css";
+
+function App() {
+ const [textarea, setTextarea] = useState(
+    "The content of a textarea goes in the value attribute"
+  );
+
+  const handleChange = (event) => {
+    setTextarea(event.target.value)
+  }
+    return (
+    
+    <div className="App">
+      <form>
+        <label>
+          Textarea:
+          <textarea value={textarea} onChange={handleChange} />
+        </label>
+      </form>
+      <p>Current Textarea Value: {textarea}</p>
+    </div>
+
+  );
+
+
+ }
+export default App;
+```
