@@ -1,4 +1,4 @@
-- If Statement:
+- If Statement and Ternary Operator
 ```
 function MissedGoal() {
   return <h1>MISSED!</h1>;
@@ -10,12 +10,12 @@ function MadeGoal() {
 
 function App(props) {
   const isGoal = props.isGoal;
+
+  //   return ( <>{ isGoal ? <MadeGoal/> : <MissedGoal/> } </>  );
   if (isGoal) {
     return <MadeGoal/>;
   }
   return <MissedGoal/>;
-  
-
 }
 export default App;
 ```
@@ -52,4 +52,8 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 ```
+
+
+```
+
   
