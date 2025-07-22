@@ -20,6 +20,7 @@ function App(props) {
 export default App;
 ``
 - Logical && Operator:
+
 ```
 function App(props) {
   const cars = props.cars;
@@ -36,6 +37,7 @@ function App(props) {
 }
 export default App;
 ```
+
 ```
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
